@@ -1,0 +1,3 @@
+[submodule "skosmos"]
+	path = skosmos
+	url = https://github.com/acdh-oeaw/vocabs-update-theme
