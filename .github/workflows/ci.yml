@@ -1,7 +1,7 @@
 name: CI
 
 env:
-  IMAGE_TAG: vocabs-acdh:2.12
+  IMAGE_TAG: vocabs-main:2.12
 
 on: [push]
 
