@@ -1,7 +1,7 @@
 name: CI
 
 env:
-  IMAGE_TAG: vocabs-main:2.12
+  IMAGE_TAG: vocabs-main:2.16
 
 on: [push]
 
@@ -19,7 +19,7 @@ jobs:
           submodules: recursive
       - name: Copy config.ttl
         run: |
-          cp ./config_skosmos.ttl skosmos/config.ttl
+          cp ./config_skosmos.ttl ./skosmos/dockerfiles/config/config-docker.ttl
       - name: generate build instructions using herokuish
         run: |
           cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
