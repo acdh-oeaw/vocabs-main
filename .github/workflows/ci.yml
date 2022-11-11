@@ -24,7 +24,7 @@ jobs:
           if [[ "${{ github.ref_name }}" == "main" || "${{ github.ref }}" == "refs/heads/main" ]]; then
             cp ./config_production.ttl ./skosmos/dockerfiles/config/config-docker.ttl
           fi
-          if [[ "${{ github.ref_name }}" == "develop" || "$ {{github.ref}} " == "refs/heads/develop" ]]; then
+          if [[ "${{ github.ref_name }}" == "develop" || "${{github.ref}} " == "refs/heads/develop" ]]; then
             cp ./config_development.ttl ./skosmos/dockerfiles/config/config-docker.ttl
           fi
       - name: generate build instructions using herokuish
