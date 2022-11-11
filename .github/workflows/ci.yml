@@ -21,10 +21,10 @@ jobs:
           submodules: recursive
       - name: Copy config.ttl
         run: |
-          if [[ "${{ github.base_ref }}" == "main" || "${{ github.ref }}" == "refs/heads/main" ]]; then
+          if [[ "${{ github.ref_name }}" == "main" || "${{ github.ref }}" == "refs/heads/main" ]]; then
             cp ./config_production.ttl ./skosmos/dockerfiles/config/config-docker.ttl
           fi
-          if [[ "${{ github.base_ref }}" == "develop" || "$ {{github.ref}} " == "refs/heads/develop" ]]; then
+          if [[ "${{ github.ref_name }}" == "develop" || "$ {{github.ref}} " == "refs/heads/develop" ]]; then
             cp ./config_development.ttl ./skosmos/dockerfiles/config/config-docker.ttl
           fi
       - name: generate build instructions using herokuish
@@ -47,7 +47,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/acdh-oeaw/${{ env.IMAGE_TAG }}${{ github.base_ref }}
+            ghcr.io/acdh-oeaw/${{ env.IMAGE_TAG }}${{ github.ref_name }}
 
   rancher_production:
     needs: build_and_push_to_registry
