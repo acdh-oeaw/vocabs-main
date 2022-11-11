@@ -19,16 +19,14 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Copy config.ttl production
-        if: github:ref == 'refs/heads/main'
-        environment: "Production"
+      - name: Copy config.ttl
         run: |
-          cp ./{{ secrets.CONFIG_FILE_NAME }} ./skosmos/dockerfiles/config/config-docker.ttl
-      - name: Copy config.ttl development
-        if: github:ref == 'refs/heads/develop'
-        environment: "Development"
-        run: |
-          cp ./{{ secrets.CONFIG_FILE_NAME }} ./skosmos/dockerfiles/config/config-docker.ttl
+          if [[ "${{github.base_ref}}" == "main" || "${{github.ref}}" == "refs/heads/main" ]]; then
+            cp ./config_production.ttl ./skosmos/dockerfiles/config/config-docker.ttl
+          fi
+          if [[ "${{github.base_ref}}" == "develop" || "${{github.ref}}" == "refs/heads/develop" ]]; then
+            cp ./config_development.ttl ./skosmos/dockerfiles/config/config-docker.ttl
+          fi
       - name: generate build instructions using herokuish
         run: |
           cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
