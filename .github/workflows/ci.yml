@@ -3,7 +3,9 @@ name: CI
 env:
   IMAGE_TAG: vocabs-main:2.16
 
-on: [push]
+on:
+  push:
+    branches: [main, develop]
 
 jobs:
   # deactivated the build-test job from Skosmos, as it should be run against in the dedicated repo (the one where the submodule Skosmos points to)
@@ -17,9 +19,16 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Copy config.ttl
+      - name: Copy config.ttl production
+        if: github:ref == 'refs/heads/main'
+        environment: "Production"
         run: |
-          cp ./config_skosmos.ttl ./skosmos/dockerfiles/config/config-docker.ttl
+          cp ./{{ secrets.CONFIG_FILE_NAME }} ./skosmos/dockerfiles/config/config-docker.ttl
+      - name: Copy config.ttl development
+        if: github:ref == 'refs/heads/develop'
+        environment: "Development"
+        run: |
+          cp ./{{ secrets.CONFIG_FILE_NAME }} ./skosmos/dockerfiles/config/config-docker.ttl
       - name: generate build instructions using herokuish
         run: |
           cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
