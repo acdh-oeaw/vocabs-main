@@ -5,7 +5,7 @@ env:
 
 on:
   push:
-    branches: [main, stage, develop]
+    branches: [prod, stage, develop]
 
 jobs:
   # deactivated the build-test job from Skosmos, as it should be run against in the dedicated repo (the one where the submodule Skosmos points to)
@@ -21,7 +21,7 @@ jobs:
           submodules: recursive
       - name: Copy config.ttl
         run: |
-          if [[ "${{ github.ref_name }}" == "main" || "${{ github.ref }}" == "refs/heads/main" ]]; then
+          if [[ "${{ github.ref_name }}" == "prod" || "${{ github.ref }}" == "refs/heads/prod" ]]; then
             cp ./config_production.ttl ./skosmos/dockerfiles/config/config-docker.ttl
           fi
           if [[ "${{ github.ref_name }}" == "stage" || "${{github.ref}} " == "refs/heads/stage" ]]; then
@@ -56,7 +56,7 @@ jobs:
     needs: build_and_push_to_registry
     name: Deploy to rancher production
     runs-on: ubuntu-latest
-    if: github.base_ref == 'main' || github.ref == 'refs/heads/main'
+    if: github.base_ref == 'prod' || github.ref == 'refs/heads/prod'
     environment: "Production"
     steps:
     - name: Rancher Deploy Action
