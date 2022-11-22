@@ -61,7 +61,7 @@ jobs:
     steps:
     - name: Rancher Deploy Action
       run: |
-        curl -i -X POST "${{ secrets.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ secrets.RANCHER_BEARER_TOKEN }}"
+        curl -i -X POST "${{ env.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ env.RANCHER_BEARER_TOKEN }}"
 
   rancher_staging:
     needs: build_and_push_to_registry
@@ -72,7 +72,7 @@ jobs:
     steps:
     - name: Rancher Deploy Action
       run: |
-        curl -i -X POST "${{ secrets.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ secrets.RANCHER_BEARER_TOKEN }}"
+        curl -i -X POST "${{ env.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ env.RANCHER_BEARER_TOKEN }}"
 
   rancher_development:
     needs: build_and_push_to_registry
@@ -83,4 +83,4 @@ jobs:
     steps:
     - name: Rancher Deploy Action
       run: |
-        curl -i -X POST "${{ secrets.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ secrets.RANCHER_BEARER_TOKEN }}"
+        curl -i -X POST "${{ env.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ env.RANCHER_BEARER_TOKEN }}"
