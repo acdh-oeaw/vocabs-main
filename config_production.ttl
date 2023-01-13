@@ -396,7 +396,7 @@
   skosmos:language "en", "de" ;
   skosmos:defaultLanguage "de" ;
   skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
   skosmos:showNotation "false" ;
   skosmos:hasMultiLingualProperty "false" ;
   skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/oeai-cultural-periods/> ;
