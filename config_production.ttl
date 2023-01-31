@@ -138,26 +138,6 @@
   void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/GeneralConcepts/OeFOS/oefos_disciplines.rdf> , <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/GeneralConcepts/OeFOS/oefos_disciplines.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> .
 
-# ACDH-CH RedmineIssue: 20608
-:vicav_dialects_taxonomy a skosmos:Vocabulary , void:Dataset ;
-  dc:title "VICAV Taxonomy of Arabic Dialects"@en ;
-  dc:subject :cat_general ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/vicavdialects/" ;
-  skosmos:shortName "vicavdialects" ;
-  skosmos:groupClass skos:Collection ;
-  skosmos:language "en" , "ar" , "tr" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:showNotation "false" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:showChangeList "true" ;
-  skosmos:fullAlphabeticalIndex "false" ;
-  skosmos:hasMulitiLingualProperty "true" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/vicavdialects> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/vicavdialects/> ;
-  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/GeneralConcepts/VICAVTaxonomy/vicavdialects.ttl> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> .
-
 # Category cat_bbt
 
 # ACDH-CH-RedmineIssue: 5546
@@ -278,7 +258,7 @@
 # ACDH-CH-RedmineIssue: 16902
 :tadirah a skosmos:Vocabulary , void:Dataset;
   dc:title "TaDiRAH: Taxonomy of Digital Research Activities in the Humanities" ;
-  dc:subject :cat_humanities ;
+  dc:subject :cat_humanities , :cat_metathesaurus ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.dariah.eu/tadirah/" ;
   skosmos:shortName "tadirah" ;
@@ -318,7 +298,7 @@
 # Category cat_culturalhistory
 
 # ACDH-CH-RedmineIssue: 19895
-:legalkraus a skosmos:Vocabulary , void:Dataset ;
+:legal_kraus a skosmos:Vocabulary , void:Dataset ;
   dc:title "legalkraus-Taxonomie" ;
   dc:subject :cat_culturalhistory ;
   dc:type mdrtype:THESAURUS ;
@@ -422,7 +402,29 @@
   skosmos:hasMultiLingualProperty "true" ;
   skosmos:mainConceptScheme  <https://vocabs.acdh.oeaw.ac.at/hsinstruments/ConceptScheme> ;
   skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/hsinstruments/> ;
-  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Music/hsinstruments.ttl> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Music/HSInstruments/hsinstruments.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> .
+
+# Category cat_linguistics
+
+# ACDH-CH RedmineIssue: 20608
+:vicav_dialects_taxonomy a skosmos:Vocabulary , void:Dataset ;
+  dc:title "VICAV Taxonomy of Arabic Dialects"@en ;
+  dc:subject :cat_linguistics ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/vicavdialects/" ;
+  skosmos:shortName "vicavdialects" ;
+  skosmos:groupClass skos:Collection ;
+  skosmos:language "en" , "ar" , "tr" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:showChangeList "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:hasMulitiLingualProperty "true" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/vicavdialects> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/vicavdialects/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/GeneralConcepts/VICAVTaxonomy/vicavdialects.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> .
 
 # Category cat_arche
@@ -605,7 +607,12 @@
 :cat_music a skos:Concept ;
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
-  skos:prefLabel "Musik"@de , "Music"@en .
+  skos:prefLabel "Musikwissenschaft"@de , "Musicology"@en .
+
+:cat_linguistics a skos:Concept ;
+  skos:topConceptOf :categories ;
+  skos:inScheme :categories ;
+  skos:prefLabel "Sprachwissenschaft"@de , "Linguistics"@en .
 
 :cat_arche a skos:Concept ;
   skos:topConceptOf :categories ;
