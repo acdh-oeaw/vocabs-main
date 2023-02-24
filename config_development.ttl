@@ -15,9 +15,8 @@
   skosmos:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-develop/sparql> ;
   # sparql-query extension, or "Generic" for plain SPARQL 1.1
   # set to "JenaText" instead if you use Fuseki with jena-text index
-  #2022-11-23 kil: JenaText must be created, until then use temporary Generic
-  #skosmos:sparqlDialect "JenaText" ;
-  skosmos:sparqlDialect "Generic" ;
+  # skosmos:sparqlDialect "Generic" ;
+  skosmos:sparqlDialect "JenaText" ;
   # whether to enable collation in sparql queries
   skosmos:sparqlCollationEnabled false ;
   # HTTP client configuration
