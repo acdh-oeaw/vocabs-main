@@ -6,7 +6,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix mdrtype: <http://publications.europa.eu/resource/authority/dataset-type/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix parthenos: <https://isl.ics.forth.gr/parthenos_vocabularies/> .
 
 # Skosmos main configuration
@@ -25,7 +24,7 @@
   skosmos:sparqlTimeout 20 ;
   skosmos:httpTimeout 5 ;
   # customize the service name
-  skosmos:serviceName "ACDH_CH_Vocabularies" ;
+  skosmos:serviceName "ACDH-CH/DARIAH Vocabularies" ;
   # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
   # kil(acdh-ch) 2020-09-25: be aware to add the ending trail otherwise concepts do not resolve correctly (if they are pointing to this skosmos)
   # 2020-09-29 kil #18251: Don't use baseHref as we get the domain by the proxy
