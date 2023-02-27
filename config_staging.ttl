@@ -199,7 +199,7 @@
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.acdh.oeaw.ac.at/bbt/" ;
   #void:uriSpace "https://vocabs.dariah.eu/bbt/" ;
-  skosmos:groupClass bbt:Facet ;
+  skosmos:groupClass <https://vocabs.dariah.eu/bbt/Facet> ;
   skosmos:shortName "bbt" ;
   skosmos:showChangeList "false" ;
   skosmos:defaultLanguage "en" ;
