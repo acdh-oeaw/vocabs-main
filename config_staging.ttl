@@ -10,12 +10,14 @@
 
 # Skosmos main configuration
 
+# ACDH-CH-RedmineIssue: 11676
 :config a skosmos:Configuration ;
   # SPARQL endpoint
   # a local Fuseki server is usually on localhost:3030
   skosmos:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> ;
   # sparql-query extension, or "Generic" for plain SPARQL 1.1
   # set to "JenaText" instead if you use Fuseki with jena-text index
+  # skosmos:sparqlDialect "Generic" ;
   skosmos:sparqlDialect "JenaText" ;
   # whether to enable collation in sparql queries
   skosmos:sparqlCollationEnabled false ;
@@ -67,26 +69,9 @@
 
 # Category cat_stage
 
-:apis_thesaurus a skosmos:Vocabulary, void:Dataset ;
-  dc:title "APIS thesaurus"@de ;
-  dc:subject :cat_stage ;
-  dc:type mdrtype:CLASSIFICATION_SYSTEM ;
-  void:uriSpace "https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/" ;
-  skosmos:groupClass skos:Collection ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:shortName "apis" ;
-  skosmos:showChangeList "false" ;
-  skosmos:hasMultiLingualProperty "true" ;
-  skosmos:showNotation "true" ;
-  skosmos:fullAlphabeticalIndex "false" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh-dev.oeaw.ac.at/apisthesaurus/ApisSchema> ;
-  skosmos:sparqlGraph <https://vocabs.acdh-dev.oeaw.ac.at/apis-thesaurus/> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
+# ACDH-CH-RedmineIssue: 21469
 :arche_methods a skosmos:Vocabulary, void:Dataset ;
-  dc:title "ARCHE Methods" ;
+  dc:title "ARCHE methods" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.acdh.oeaw.ac.at/arche_methods/" ;
@@ -101,6 +86,7 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-CH-RedmineIssue: 21467
 :indigo a skosmos:Vocabulary, void:Dataset ;
   dc:title "INDIGO Thesaurus"@en ;
   dc:subject :cat_stage ;
@@ -118,9 +104,55 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# Category cat_archive
+
+# ACDH-CH-RedmineIssue: 21470
+:jb80 a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Deutschsprachige Japan-Bibliographie 1980-2000 - Thesaurus" ;
+  dc:subject :cat_archive ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/JB80/" ;
+  skosmos:defaultLanguage "de" ;
+  skosmos:language "de" ;
+  skosmos:shortName "JB_80" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:defaultLanguageExternalResources "en" ;
+  #skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:hasMultiLingualProperty "false" ;
+  skosmos:sortByNotation "true" ;
+  skosmos:mainConceptScheme <http://vocabs.acdh.oeaw.ac.at/JB80> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/JB80/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
+# Category cat_test
+
+# ACDH-CH-RedmineIssue: 5546
+:bbt a skosmos:Vocabulary , void:Dataset ;
+  dc:title "Backbone Thesaurus" ;
+  dc:subject :cat_test ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.dariah.eu/bbt/" ;
+  skosmos:shortName "bbt" ;
+  skosmos:groupClass <https://vocabs.dariah.eu/bbt/Facet> ;
+  skosmos:language "en" , "el" , "de" , "fr" , "pt" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:showNotation "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  # skosmos:usePlugin "treeview" ;
+  # skosmos:usePlugin "acdh_visualization" ;
+  skosmos:mainConceptScheme <https://vocabs.dariah.eu/bbt/ConceptScheme/Backbone_Thesaurus> ;
+  skosmos:sparqlGraph <https://vocabs.dariah.eu/bbt/> ;
+  void:dataDump <https://isl.ics.forth.gr/bbt-federated-thesaurus/downloads/BBT_v1.2.8.rdf> , <https://isl.ics.forth.gr/bbt-federated-thesaurus/downloads/BBT_v1.2.8.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
+# ACDH-CH-RedmineIssue: n/a
 :oeai_thesaurus a skosmos:Vocabulary, void:Dataset ;
   dc:title "ÖAI Thesaurus Test"@de , "OeAI Thesaurus Sample"@en;
-  dc:subject :cat_stage ;
+  dc:subject :cat_test ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.acdh.oeaw.ac.at/OeAI_Th/";
   skosmos:fullAlphabeticalIndex "true";
@@ -136,154 +168,95 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
-# Category cat_archive
-
-:jb80 a skosmos:Vocabulary, void:Dataset ;
-  dc:title "Deutschsprachige Japan-Bibliographie 1980-2000 - Thesaurus" ;
-  dc:subject :cat_archive ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/JB80/" ;
-  skosmos:groupClass skos:Collection ;
-  skosmos:defaultLanguage "de" ;
-  skosmos:language "de" ;
-  skosmos:shortName "JB 80" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:defaultLanguageExternalResources "en" ;
-  #skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:hasMultiLingualProperty "false" ;
-  skosmos:mainConceptScheme <http://vocabs.acdh.oeaw.ac.at/JB80> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/JB80/> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
-:pmbplacetypes a skosmos:Vocabulary, void:Dataset ;
-  dc:title "PMB Ortstypen"@de;
-  dc:title "PMB Place types"@en;
-  dc:subject :cat_archive ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/pmb/placetypes/";
-  skosmos:groupClass skos:Collection;
-  skosmos:defaultLanguage "de";
-  skosmos:language "de", "en";
-  skosmos:shortName "pmbplacetypes";
-  skosmos:showChangeList "true" ;
-  skosmos:showTopConcepts "true";
-  skosmos:defaultLanguageExternalResources "en";
-  skosmos:hasMultiLingualProperty "true";
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/pmb/placetypes>;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/pmb/placetypes/>;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
-# Category cat_test
-
-:testv a skosmos:Vocabulary, void:Dataset ;
-  dc:title "Test groups"@en ;
-  dc:subject :cat_test ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh-dev.oeaw.ac.at/test/" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:groupClass skos:Collection ;
-  skosmos:language "en" ;
-  skosmos:shortName "testv" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh-dev.oeaw.ac.at/test/Schema> ;
-  skosmos:sparqlGraph <https://vocabs.acdh-dev.oeaw.ac.at/test/> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
-# ACDH-CH-RedmineIssue: 5546
-:backbone_thesaurus a skosmos:Vocabulary, void:Dataset ;
-  dc:title "Backbone Thesaurus" ;
-  dc:subject :cat_test ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/bbt/" ;
-  #void:uriSpace "https://vocabs.dariah.eu/bbt/" ;
-  skosmos:groupClass <https://vocabs.dariah.eu/bbt/Facet> ;
-  skosmos:shortName "bbt" ;
-  skosmos:showChangeList "false" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:language "en" , "el" , "de" , "fr" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:hasMultiLingualProperty "true" ;
-  skosmos:showChangeList "true" ;
-  skosmos:showNotation "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:usePlugin "acdh_visualization" ;
-  skosmos:mainConceptScheme <https://vocabs.dariah.eu/bbt/ConceptScheme/Backbone_Thesaurus> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/bbt/> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
-# ACDH-CH-RedmineIssue: tbc
-:parthenos_vocabularies a skosmos:Vocabulary, void:Dataset ;
+# ACDH-CH-RedmineIssue: 20658
+:parthenos_vocabularies a skosmos:Vocabulary , void:Dataset ;
   dc:title "PARTHENOS Vocabularies"@en ;
   dc:subject :cat_test ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://isl.ics.forth.gr/parthenos_vocabularies/" ;
+  skosmos:shortName "parthenos_vocabularies" ;
+  # skosmos:groupClass <https://isl.ics.forth.gr/parthenos_vocabularies/Facet> ;
   skosmos:groupClass parthenos:Facet ;
-  skosmos:shortName "parthenos" ;
+  skosmos:language "en" , "el" ;
   skosmos:defaultLanguage "en" ;
-  skosmos:language "en", "el" ;
   skosmos:showTopConcepts "true" ;
   skosmos:hasMultiLingualProperty "true" ;
   skosmos:showNotation "true" ;
   skosmos:mainConceptScheme <https://isl.ics.forth.gr/parthenos_vocabularies> ;
   skosmos:sparqlGraph <https://isl.ics.forth.gr/parthenos_vocabularies/> ;
+  void:dataDump <https://isl.ics.forth.gr/bbt-federated-thesaurus/downloads/PARTHENOS_with_2021-07-29_BBT_connections.rdf> , <https://isl.ics.forth.gr/bbt-federated-thesaurus/downloads/PARTHENOS_with_2021-07-29_BBT_connections.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
+# ACDH-CH-RedmineIssue: n/a
+:testv a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Test vocabulary"@en ;
+  dc:subject :cat_test ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh-dev.oeaw.ac.at/testv/" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:groupClass skos:Collection ;
+  skosmos:language "en" ;
+  skosmos:shortName "testv" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh-dev.oeaw.ac.at/testv/Schema> ;
+  skosmos:sparqlGraph <https://vocabs.acdh-dev.oeaw.ac.at/testv/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
 # Category cat_lode
 
-# Testing ACDH-CH Date Vocabulary
-:date a skosmos:Vocabulary, void:Dataset ;
+# ACDH-CH-RedmineIssue: 17311
+# :date a skosmos:Vocabulary, void:Dataset ;
+:date_entities a skosmos:Vocabulary , void:Dataset ;
   # Should be exactly the same as dc:title metadata in the uploaded SKOS file
-  dc:title "ACDH-CH Date Entities";
+  # dc:title "ACDH-CH Date Entities";
+  dc:title "ACDH-CH Linked Open Date Entities" ;
   dc:subject :cat_lode ;
   dc:type mdrtype:THESAURUS ;
-  # void:uriSpace should be exactly the same as conceptScheme URI, minus /ConceptScheme> suffix
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/date/";
-  # skosmos:groupClass skos:Collection;
-  skosmos:language "en";
-  skosmos:shortName "Date_Entities";
-  # skosmos:showChangeList "false" ;
-  skosmos:defaultLanguage "en";
-  skosmos:showTopConcepts "true";
-  skosmos:showAlphabeticalIndex "false";
-  skosmos:fullAlphabeticalIndex "false";
-  skosmos:hasMultiLingualProperty "true";
-  # For faster parformance, use "false" to deactivate loading external resources to fetch labels
-  skosmos:loadExternalResources "true";
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/date/conceptScheme>;
-  # skosmos:sparqlGraph should be exactly the same as conceptScheme URI, when making it in production
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/date/>;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-lode/sparql>
-.
-
-# Testing ACDH-CH Unit of Time Vocabulary
-:unit_of_time a skosmos:Vocabulary, void:Dataset ;
-  # Should be exactly the same as dc:title metadata in the uploaded SKOS file
-  dc:title "ACDH-CH Unit of Time Entities";
-  dc:subject :cat_lode ;
-  dc:type mdrtype:THESAURUS ;
-  # void:uriSpace should be exactly the same as conceptScheme URI, minus /ConceptScheme> suffix
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/unit_of_time/";
-  # skosmos:groupClass skos:Collection;
-  skosmos:language "en";
-  skosmos:shortName "unit_of_time_Entities";
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/date/" ;
+  # skosmos:shortName "Date_Entities";
+  skosmos:shortName "date" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
   skosmos:showChangeList "false" ;
-  skosmos:defaultLanguage "en";
-  skosmos:showTopConcepts "true";
-  skosmos:fullAlphabeticalIndex "true";
-  skosmos:hasMultiLingualProperty "true";
-  # For faster parformance, use "false" to deactivate loading external resources to fetch labels
-  skosmos:loadExternalResources "true";
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/unit_of_time/conceptScheme>;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/unit_of_time/>;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  # For faster performance, use "false" to deactivate loading external resources to fetch labels
+  skosmos:loadExternalResources "true" ;
+  # Also no statistics in the overview which helps to show the overview faster
+  skosmos:showStatistics "false" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/date/conceptScheme> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/date/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-lode/sparql>
 .
 
-# Categories and mdrtype definitions
+# ACDH-CH-RedmineIssue: 17311
+# :unit_of_time a skosmos:Vocabulary, void:Dataset ;
+:ut_entities a skosmos:Vocabulary , void:Dataset ;
+  # dc:title "ACDH-CH Unit of Time Entities";
+  dc:title "ACDH-CH Linked Open Date Entities Unit of Time" ;
+  dc:subject :cat_lode ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/unit_of_time/" ;
+  # skosmos:shortName "unit_of_time_Entities";
+  skosmos:shortName "unit_of_time" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showChangeList "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  # For faster performance, use "false" to deactivate loading external resources to fetch labels
+  skosmos:loadExternalResources "true" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/unit_of_time/conceptScheme> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/unit_of_time/> ;
+  void:dataDump <https://vocabs.acdh.oeaw.ac.at/download/UnitOfTime_v_0_95.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-lode/sparql>
+.
+
+# Skosmos categories/subjects
 
 :categories a skos:ConceptScheme;
   skos:prefLabel "Skosmos Vocabulary Categories"@en .
