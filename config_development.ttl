@@ -182,6 +182,8 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-develop/sparql>
 .
 
+# Skosmos categories/subjects
+
 :categories a skos:ConceptScheme;
   skos:prefLabel "Skosmos Vocabulary Categories"@en
 .
@@ -195,4 +197,3 @@
 mdrtype:THESAURUS a skos:Concept ;
   skos:prefLabel "Тезаурус"@bg, "Tezaurus"@cs, "Tesaurus"@da, "Thesaurus"@de, "Θησαυρός"@el, "Thesaurus"@en, "Tesaurus"@et, "Tesaurus"@fi, "Thésaurus"@fr, "Pojmovnik"@hr, "Tezaurusz"@hu, "Tesauro"@it, "Tēzaurs"@lv, "Tezauras"@lt, "Teżawru"@mt, "Thesaurus"@nl, "Tesaurus"@no, "Tezaurus"@pl, "Tesauro"@pt, "Tezaur"@ro, "Synonymický slovník"@sk, "Tezaver"@sl, "Tesauro"@es, "Tesaurus"@sv
 .
-
