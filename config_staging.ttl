@@ -86,6 +86,24 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-CH-RedmineIssue: n/a
+:indigo_imgreg a skosmos:Vocabulary, void:Dataset ;
+  dc:title "INDIGO ImgReg"@en ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/indigoImgReg/ " ;
+  skosmos:shortName "indigo_imgreg" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:groupClass skos:Collection ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/indigoImgReg/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/indigoImgReg/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
 # ACDH-CH-RedmineIssue: 21467
 :indigo a skosmos:Vocabulary, void:Dataset ;
   dc:title "INDIGO Thesaurus"@en ;
