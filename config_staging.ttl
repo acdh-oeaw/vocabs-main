@@ -29,7 +29,7 @@
   # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
   # skosmos:baseHref "http://localhost/Skosmos/" ;
   # 2020-09-29 kil #18251: Don't use baseHref as we get the domain by the proxy
-  #skosmos:baseHref "https://vocabs.acdh-dev.oeaw.ac.at/" ;
+  # skosmos:baseHref "https://vocabs.acdh.oeaw.ac.at/" ;
   # interface languages available, and the corresponding system locales
   skosmos:languages (
     [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
@@ -211,14 +211,14 @@
   dc:title "Test vocabulary"@en ;
   dc:subject :cat_test ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh-dev.oeaw.ac.at/testv/" ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/testv/" ;
   skosmos:defaultLanguage "en" ;
   skosmos:groupClass skos:Collection ;
   skosmos:language "en" ;
   skosmos:shortName "testv" ;
   skosmos:showTopConcepts "true" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh-dev.oeaw.ac.at/testv/Schema> ;
-  skosmos:sparqlGraph <https://vocabs.acdh-dev.oeaw.ac.at/testv/> ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/testv/Schema> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/testv/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 

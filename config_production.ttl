@@ -34,23 +34,6 @@
   skosmos:languages (
     [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
     [ rdfs:label "de" ; rdf:value "de_DE.utf8" ]
-    [ rdfs:label "ar" ; rdf:value "ar_AE.utf8" ]
-    [ rdfs:label "da" ; rdf:value "da_DK.utf8" ]
-    [ rdfs:label "en_US" ; rdf:value "en_US.utf8" ]
-    [ rdfs:label "es" ; rdf:value "es_ES.utf8" ]
-    [ rdfs:label "fa" ; rdf:value "fa_IR.utf8" ]
-    [ rdfs:label "fi" ; rdf:value "fi_FI.utf8" ]
-    [ rdfs:label "fr" ; rdf:value "fr_FR.utf8" ]
-    [ rdfs:label "it" ; rdf:value "it_IT.utf8" ]
-    [ rdfs:label "nb" ; rdf:value "nb_NO.utf8" ]
-    [ rdfs:label "nl" ; rdf:value "nl_NL.utf8" ]
-    [ rdfs:label "nn" ; rdf:value "nn_NO.utf8" ]
-    [ rdfs:label "pl" ; rdf:value "pl_PL.utf8" ]
-    [ rdfs:label "pt" ; rdf:value "pt_PT.utf8" ]
-    [ rdfs:label "pt_BR" ; rdf:value "pt_BR.utf8" ]
-    [ rdfs:label "ru" ; rdf:value "ru_RU.utf8" ]
-    [ rdfs:label "sv" ; rdf:value "sv_SE.utf8" ]
-    [ rdfs:label "zh" ; rdf:value "zh_CN.utf8" ]
   ) ;
   # how many results (maximum) to load at a time on the search results page
   skosmos:searchResultsSize 20 ;
@@ -521,47 +504,48 @@
 
 # Category cat_date
 # currently deactivated the category due to problems with the ingest of the date_entities (deactivated by commenting out the cat_date)
+# completely commenting it out as it otherwise will show up in the API
 
 # ACDH-CH-RedmineIssue: 17311
-:ut_entities a skosmos:Vocabulary , void:Dataset ;
-  dc:title "ACDH-CH Linked Open Date Entities Unit of Time" ;
-  dc:subject :cat_date ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/unit_of_time" ;
-  skosmos:shortName "unit_of_time" ;
-  skosmos:language "en" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:showChangeList "false" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:hasMultiLingualProperty "true" ;
-  # For faster performance, use "false" to deactivate loading external resources to fetch labels
-  skosmos:loadExternalResources "true" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/unit_of_time/conceptScheme> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/unit_of_time> ;
-  void:dataDump <https://vocabs.acdh.oeaw.ac.at/download/UnitOfTime_v_0_95.ttl> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-date-entities/sparql> .
+#:ut_entities a skosmos:Vocabulary , void:Dataset ;
+#  dc:title "ACDH-CH Linked Open Date Entities Unit of Time" ;
+#  dc:subject :cat_date ;
+#  dc:type mdrtype:THESAURUS ;
+#  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/unit_of_time" ;
+#  skosmos:shortName "unit_of_time" ;
+#  skosmos:language "en" ;
+#  skosmos:defaultLanguage "en" ;
+#  skosmos:showChangeList "false" ;
+#  skosmos:showTopConcepts "true" ;
+#  skosmos:fullAlphabeticalIndex "true" ;
+#  skosmos:hasMultiLingualProperty "true" ;
+#  # For faster performance, use "false" to deactivate loading external resources to fetch labels
+#  skosmos:loadExternalResources "true" ;
+#  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/unit_of_time/conceptScheme> ;
+#  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/unit_of_time> ;
+#  void:dataDump <https://vocabs.acdh.oeaw.ac.at/download/UnitOfTime_v_0_95.ttl> ;
+#  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-date-entities/sparql> .
 
 # ACDH-CH-RedmineIssue: 17311
-:date_entities a skosmos:Vocabulary , void:Dataset ;
-  dc:title "ACDH-CH Linked Open Date Entities" ;
-  dc:subject :cat_date ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/date" ;
-  skosmos:shortName "date" ;
-  skosmos:language "en" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:showChangeList "false" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "false" ;
-  skosmos:hasMultiLingualProperty "true" ;
-  # For faster performance, use "false" to deactivate loading external resources to fetch labels
-  skosmos:loadExternalResources "true" ;
-  # Also no statistics in the overview which helps to show the overview faster
-  skosmos:showStatistics "false" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/date/conceptScheme> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/date> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-date-entities/sparql> .
+#:date_entities a skosmos:Vocabulary , void:Dataset ;
+#  dc:title "ACDH-CH Linked Open Date Entities" ;
+#  dc:subject :cat_date ;
+#  dc:type mdrtype:THESAURUS ;
+#  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/date" ;
+#  skosmos:shortName "date" ;
+#  skosmos:language "en" ;
+#  skosmos:defaultLanguage "en" ;
+#  skosmos:showChangeList "false" ;
+#  skosmos:showTopConcepts "true" ;
+#  skosmos:fullAlphabeticalIndex "false" ;
+#  skosmos:hasMultiLingualProperty "true" ;
+#  # For faster performance, use "false" to deactivate loading external resources to fetch labels
+#  skosmos:loadExternalResources "true" ;
+#  # Also no statistics in the overview which helps to show the overview faster
+#  skosmos:showStatistics "false" ;
+#  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/date/conceptScheme> ;
+#  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/date> ;
+#  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-date-entities/sparql> .
 
 # Skosmos categories/subjects
 
