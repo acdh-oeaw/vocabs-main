@@ -294,6 +294,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/indigo/Thesaurus> ;
   skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/indigo/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/CulturalHistory/indigo/indigo.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql>
 .
 
@@ -520,6 +521,27 @@
   void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/ARCHE/arche_resourcetypecategory/archecategory.rdf> , <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/ARCHE/arche_resourcetypecategory/archecategory.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> .
 
+# Category cat_misc
+
+# ACDH-CH-RedmineIssue: 21709
+:graphis_imgreg_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "GRAPHIS Image Region"@en ;
+  dc:subject :cat_misc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/graphis-imgreg/" ;
+  skosmos:shortName "graphis-imgreg" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:groupClass skos:Collection ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/graphis-imgreg/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/graphis-imgreg/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Misc/graphis-imgreg/graphis-imgreg.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql>
+.
+
 # Category cat_date
 # currently deactivated the category due to problems with the ingest of the date_entities (deactivated by commenting out the cat_date)
 # completely commenting it out as it otherwise will show up in the API
@@ -619,6 +641,12 @@
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
   skos:prefLabel "ARCHE"@de , "ARCHE"@en .
+
+:cat_misc a skos:Concept ;
+  skos:topConceptOf :categories ;
+  skos:inScheme :categories ;
+  skos:prefLabel "Sonstiges"@de , "Miscellaneous"@en
+.
 
 #:cat_date a skos:Concept ;
 #  skos:topConceptOf :categories ;

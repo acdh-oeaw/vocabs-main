@@ -86,42 +86,6 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
-# ACDH-CH-RedmineIssue: 21709
-:graphis_imgreg a skosmos:Vocabulary, void:Dataset ;
-  dc:title "GRAPHIS Image Region"@en ;
-  dc:subject :cat_stage ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/graphis-imgreg/ " ;
-  skosmos:shortName "graphis-imgreg" ;
-  skosmos:language "en" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:groupClass skos:Collection ;
-  skosmos:showNotation "false" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/graphis-imgreg/> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/graphis-imgreg/> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
-# ACDH-CH-RedmineIssue: 21467
-:indigo a skosmos:Vocabulary, void:Dataset ;
-  dc:title "INDIGO Thesaurus"@en ;
-  dc:subject :cat_stage ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/indigo/" ;
-  skosmos:shortName "indigo" ;
-  skosmos:language "en" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:groupClass skos:Collection ;
-  skosmos:showNotation "false" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "false" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/indigo/Thesaurus> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/indigo/> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
 # ACDH-CH-RedmineIssue: 21817
 :oeai-m a skosmos:Vocabulary, void:Dataset ;
   dc:title "OeAI Thesaurus - Materialien"@de , "OeAI Thesaurus - Materials"@en ;
