@@ -388,6 +388,25 @@
   void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Archaeology/OeAICulturalTimePeriods/oeai_cultural_time_periods.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> .
 
+# ACDH-CH-RedmineIssue: 21817
+:oeai-materials_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "OeAI Thesaurus - Materialien"@de , "OeAI Thesaurus - Materials"@en ;
+  dc:subject :cat_archaeology ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/oeai-materials/" ;
+  skosmos:shortName "oeai-materials" ;
+  skosmos:language "en", "de" ;
+  skosmos:defaultLanguage "de" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:showNotation "false" ;
+  skosmos:hasMultiLingualProperty "false" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/oeai-materials/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/materials/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Archaeology/OeAIMaterials/oeai_materials.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql>
+.
+
 # Category cat_music
 
 # ACDH-CH-RedmineIssue: 688
