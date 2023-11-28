@@ -105,6 +105,25 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-CH-RedmineIssue: 22270
+:csd-tool-tasks a skosmos:Vocabulary, void:Dataset ;
+  dc:title "CLARIN taxonomy for tools and services tasks"@en ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "http://vocabs.sshopencloud.eu/vocabularies/tooltasks/" ;
+  skosmos:shortName "csd-tool-tasks" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:showNotation "false" ;
+  skosmos:hasMultiLingualProperty "false" ;
+  skosmos:mainConceptScheme <http://vocabs.sshopencloud.eu/vocabularies/tooltasks/> ;
+  skosmos:sparqlGraph <http://vocabs.sshopencloud.eu/vocabularies/tooltasks/> ;
+  # void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Archaeology/OeAIMaterials/oeai_materials.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
 # ACDH-CH-RedmineIssue: 21817
 :oeai-m a skosmos:Vocabulary, void:Dataset ;
   dc:title "OeAI Thesaurus - Materialien"@de , "OeAI Thesaurus - Materials"@en ;
