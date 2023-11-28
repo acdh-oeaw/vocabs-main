@@ -96,7 +96,7 @@
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
   skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:fullAlphabeticalIndex "true" ;
   skosmos:showNotation "false" ;
   skosmos:hasMultiLingualProperty "false" ;
   skosmos:mainConceptScheme <http://vocabs.sshopencloud.eu/vocabularies/linguisticsubjects/> ;
@@ -115,7 +115,7 @@
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
   skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:fullAlphabeticalIndex "true" ;
   skosmos:showNotation "false" ;
   skosmos:hasMultiLingualProperty "false" ;
   skosmos:mainConceptScheme <http://vocabs.sshopencloud.eu/vocabularies/tooltasks/> ;
