@@ -91,7 +91,7 @@
   dc:title "CLARIN taxonomy for Linguistic Subjects"@en ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "http://vocabs.sshopencloud.eu/vocabularies/linguisticsubjects/" ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/" ;
   skosmos:shortName "csd-linguistic-subjects" ;
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
@@ -99,7 +99,8 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:showNotation "false" ;
   skosmos:hasMultiLingualProperty "false" ;
-  skosmos:mainConceptScheme <http://vocabs.sshopencloud.eu/vocabularies/linguisticsubjects/> ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/> ;
+  # ToDo change sparqlGraph on production
   skosmos:sparqlGraph <http://vocabs.sshopencloud.eu/vocabularies/linguisticsubjects/> ;
   # void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Archaeology/OeAIMaterials/oeai_materials.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
@@ -110,7 +111,7 @@
   dc:title "CLARIN taxonomy for tools and services tasks"@en ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "http://vocabs.sshopencloud.eu/vocabularies/tooltasks/" ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/csd-tool-tasks/" ;
   skosmos:shortName "csd-tool-tasks" ;
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
@@ -118,7 +119,8 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:showNotation "false" ;
   skosmos:hasMultiLingualProperty "false" ;
-  skosmos:mainConceptScheme <http://vocabs.sshopencloud.eu/vocabularies/tooltasks/> ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/csd-tool-tasks/> ;
+  # ToDo change sparqlGraph on production
   skosmos:sparqlGraph <http://vocabs.sshopencloud.eu/vocabularies/tooltasks/> ;
   # void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Archaeology/OeAIMaterials/oeai_materials.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
