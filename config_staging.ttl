@@ -86,43 +86,22 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
-# ACDH-CH-RedmineIssue: 22252
-:csd-linguistic-subjects a skosmos:Vocabulary, void:Dataset ;
-  dc:title "CLARIN taxonomy for Linguistic Subjects"@en ;
+# ACDH-CH-RedmineIssue: 22506
+:sshomp-format a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSHOMP Format"@en ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/" ;
-  skosmos:shortName "csd-linguistic-subjects" ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshomp-format/" ;
+  skosmos:shortName "sshomp-format" ;
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
   skosmos:showTopConcepts "true" ;
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:showNotation "false" ;
   skosmos:hasMultiLingualProperty "false" ;
-  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/> ;
-  # ToDo change sparqlGraph on production
-  skosmos:sparqlGraph <http://vocabs.sshopencloud.eu/vocabularies/linguisticsubjects/> ;
-  # void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Archaeology/OeAIMaterials/oeai_materials.ttl> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
-.
-
-# ACDH-CH-RedmineIssue: 22270
-:csd-tool-tasks a skosmos:Vocabulary, void:Dataset ;
-  dc:title "CLARIN taxonomy for tools and services tasks"@en ;
-  dc:subject :cat_stage ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/csd-tool-tasks/" ;
-  skosmos:shortName "csd-tool-tasks" ;
-  skosmos:language "en" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:showNotation "false" ;
-  skosmos:hasMultiLingualProperty "false" ;
-  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/csd-tool-tasks/> ;
-  # ToDo change sparqlGraph on production
-  skosmos:sparqlGraph <http://vocabs.sshopencloud.eu/vocabularies/tooltasks/> ;
-  # void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Archaeology/OeAIMaterials/oeai_materials.ttl> ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-format/> ;
+  skosmos:sparqlGraph <http://vocabs.sshopencloud.eu/vocabularies/sshomp-format/> ;
+  # void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/sshomp_format/sshomp_format.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
