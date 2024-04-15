@@ -69,6 +69,24 @@
 
 # Category cat_stage
 
+# ACDH-CH-RedmineIssue: 20731
+:arche_methods a skosmos:Vocabulary, void:Dataset ;
+  dc:title "ARCHE Licenses" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/archelicenses/" ;
+  skosmos:shortName "archelicenses" ;
+  skosmos:language "en", "de" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showChangeList "true" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/archelicenses/Schema> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/archelicenses/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
 # ACDH-CH-RedmineIssue: 21469
 :arche_methods a skosmos:Vocabulary, void:Dataset ;
   dc:title "ARCHE methods" ;
