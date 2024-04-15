@@ -70,7 +70,7 @@
 # Category cat_stage
 
 # ACDH-CH-RedmineIssue: 20731
-:arche_methods a skosmos:Vocabulary, void:Dataset ;
+:arche_licenses a skosmos:Vocabulary, void:Dataset ;
   dc:title "ARCHE Licenses" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
