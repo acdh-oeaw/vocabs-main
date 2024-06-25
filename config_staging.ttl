@@ -69,6 +69,24 @@
 
 # Category cat_stage
 
+# ACDH-CH-RedmineIssue: 21817
+:oeai-materials a skosmos:Vocabulary, void:Dataset ;
+  dc:title "OeAI Thesaurus - Materialien"@de , "OeAI Thesaurus - Materials"@en ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/oeai-materials/" ;
+  skosmos:shortName "oeai-materials" ;
+  skosmos:language "en", "de" ;
+  skosmos:defaultLanguage "de" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:showNotation "false" ;
+  skosmos:hasMultiLingualProperty "false" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/oeai-materials/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/oeai-materials/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
 # ACDH-CH-RedmineIssue: 20731
 :arche_licenses a skosmos:Vocabulary, void:Dataset ;
   dc:title "ARCHE Licenses" ;
