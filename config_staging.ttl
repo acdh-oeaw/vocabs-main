@@ -123,6 +123,24 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-CH-RedmineIssue: 23162
+:schleiermacher a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Thesaurus zu den Ästhetikvorlesungen von Friedrich Schleiermacher" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://schleiermacher-digital.de/skos/" ;
+  skosmos:shortName "schleiermacher" ;
+  skosmos:language "de", "en", "la", "el" ;
+  skosmos:defaultLanguage "de" ;
+  skosmos:showChangeList "true" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://schleiermacher-digital.de/skos> ;
+  skosmos:sparqlGraph <https://schleiermacher-digital.de/skos/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
 # Category cat_archive
 
 # ACDH-CH-RedmineIssue: 21470
