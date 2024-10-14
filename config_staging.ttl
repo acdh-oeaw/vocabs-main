@@ -132,10 +132,10 @@
   skosmos:shortName "schleiermacher" ;
   skosmos:language "de", "en", "la", "el" ;
   skosmos:defaultLanguage "de" ;
-  skosmos:showChangeList "true" ;
   skosmos:showTopConcepts "true" ;
   skosmos:hasMultiLingualProperty "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:groupClass skos:Collection ;
   skosmos:mainConceptScheme <https://schleiermacher-digital.de/skos> ;
   skosmos:sparqlGraph <https://schleiermacher-digital.de/skos/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
