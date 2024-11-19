@@ -130,7 +130,7 @@
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://schleiermacher-digital.de/skos/" ;
   skosmos:shortName "schleiermacher" ;
-  skosmos:language "de", "en", "la", "el" ;
+  skosmos:language "de", "en" ;
   skosmos:defaultLanguage "de" ;
   skosmos:showTopConcepts "true" ;
   skosmos:hasMultiLingualProperty "true" ;
