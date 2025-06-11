@@ -123,6 +123,24 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-CH-RedmineIssue: 16902 
+:tadirah a skosmos:Vocabulary , void:Dataset;
+  dc:title "TaDiRAH: Taxonomy of Digital Research Activities in the Humanities" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.dariah.eu/tadirah/" ;
+  skosmos:shortName "tadirah" ;
+  skosmos:language "en" ; 
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:showChangeList "false" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.dariah.eu/tadirah/> ;
+  skosmos:sparqlGraph <https://vocabs.dariah.eu/tadirah/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Humanities/TaDiRAH/tadirah.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
 # ACDH-CH-RedmineIssue: 23162
 :schleiermacher_browse a skosmos:Vocabulary, void:Dataset ;
   dc:title "Thesaurus zu den Ästhetikvorlesungen von Friedrich Schleiermacher" ;
