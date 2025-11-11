@@ -175,6 +175,22 @@
   skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/bmimi/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
+# ACDH-RedmineIssue: 26188
+:openatlas-bone_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "OpenAtlas bone vocabulary" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/openatlas-bone/" ;
+  skosmos:shortName "oa-bone" ;
+  skosmos:language "de", "en", "la" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/openatlas-bone/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/openatlas-bone/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
 # Category cat_archive
 
 # ACDH-CH-RedmineIssue: 21470
