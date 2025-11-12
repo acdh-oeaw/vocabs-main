@@ -193,7 +193,7 @@
 
 # ACDH-RedmineIssue: xxxxx
 :category_browse a skosmos:Vocabulary, void:Dataset ;
-  dc:title "Category vocabulary" ;
+  dc:title "SSHOMP Resource Category" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.dariah.eu/category/" ;
