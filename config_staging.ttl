@@ -123,6 +123,24 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-CH-RedmineIssue: 16902 
+:tadirah a skosmos:Vocabulary , void:Dataset;
+  dc:title "TaDiRAH: Taxonomy of Digital Research Activities in the Humanities" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.dariah.eu/tadirah/" ;
+  skosmos:shortName "tadirah" ;
+  skosmos:language "en" ; 
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:showChangeList "false" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.dariah.eu/tadirah/> ;
+  skosmos:sparqlGraph <https://vocabs.dariah.eu/tadirah/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-main/Humanities/TaDiRAH/tadirah.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
 # ACDH-CH-RedmineIssue: 23162
 :schleiermacher_browse a skosmos:Vocabulary, void:Dataset ;
   dc:title "Thesaurus zu den Ästhetikvorlesungen von Friedrich Schleiermacher" ;
@@ -140,6 +158,54 @@
   skosmos:sparqlGraph <https://schleiermacher-digital.de/skos/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
+
+# ACDH-RedmineIssue: 25330
+:bmimi_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "BMIMI Subset" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/bmimi/" ;
+  skosmos:shortName "bmimi" ;
+  skosmos:language "de", "en" ;
+  skosmos:defaultLanguage "de" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/bmimi/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/bmimi/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
+# ACDH-RedmineIssue: 26188
+:openatlas-bone_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "OpenAtlas bone vocabulary" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/openatlas-bone/" ;
+  skosmos:shortName "oa-bone" ;
+  skosmos:language "de", "en", "la" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/openatlas-bone/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/openatlas-bone/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
+# ACDH-RedmineIssue: xxxxx
+:category_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSHOMP Resource Category" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.dariah.eu/category/" ;
+  skosmos:shortName "category" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.dariah.eu/category/> ;
+  skosmos:sparqlGraph <https://vocabs.dariah.eu/category/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
 # Category cat_archive
 
