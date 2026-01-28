@@ -202,7 +202,7 @@
   skosmos:defaultLanguage "en" ;
   skosmos:showTopConcepts "true" ;
   skosmos:hasMultiLingualProperty "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/ppop_voc/> ;
   skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/ppop_voc/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
