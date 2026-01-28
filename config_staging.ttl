@@ -191,6 +191,22 @@
   skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/openatlas-bone/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
+# ACDH-RedmineIssue: n/a
+:ppop_voc_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Pottery Pyrotechnology and Craft Spaces Open Vocabulary" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/ppop_voc/" ;
+  skosmos:shortName "ppop_voc" ;
+  skosmos:language "en", "fr" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/ppop_voc/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/ppop_voc/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
 # ACDH-RedmineIssue: xxxxx
 :category_browse a skosmos:Vocabulary, void:Dataset ;
   dc:title "SSHOMP Resource Category" ;
