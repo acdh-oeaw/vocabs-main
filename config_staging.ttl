@@ -208,19 +208,19 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
 # ACDH-RedmineIssue: xxxxx
-:category_browse a skosmos:Vocabulary, void:Dataset ;
-  dc:title "SSHOMP Resource Category" ;
+:resource-type_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSHOMP Resource Type" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.dariah.eu/category/" ;
-  skosmos:shortName "category" ;
+  void:uriSpace "https://vocabs.dariah.eu/resource-type/" ;
+  skosmos:shortName "resource-type" ;
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
   skosmos:showTopConcepts "true" ;
   skosmos:hasMultiLingualProperty "true" ;
   skosmos:fullAlphabeticalIndex "false" ;
-  skosmos:mainConceptScheme <https://vocabs.dariah.eu/category/> ;
-  skosmos:sparqlGraph <https://vocabs.dariah.eu/category/> ;
+  skosmos:mainConceptScheme <https://vocabs.dariah.eu/resource-type/> ;
+  skosmos:sparqlGraph <https://vocabs.dariah.eu/resource-type/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
 # ACDH-CH-RedmineIssue: 28162
