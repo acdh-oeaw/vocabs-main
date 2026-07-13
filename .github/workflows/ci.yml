@@ -35,10 +35,7 @@ jobs:
           cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
       - name: Patch Dockerfile
         run: |
-          sed -i \
-            's|RUN curl -sS https://getcomposer.org/installer | php|RUN curl -sS https://getcomposer.org/installer | php -- --version=2.2.24|g' \
-            ./skosmos/Dockerfile
-      
+          sed -i '/getcomposer.org\/installer/s|php$|php -- --version=2.2.24|' ./skosmos/Dockerfile      
           echo "=== Composer line ==="
           grep "getcomposer.org" ./skosmos/Dockerfile
       - name: Set up QEMU
