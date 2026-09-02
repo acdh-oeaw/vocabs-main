@@ -2,6 +2,7 @@ name: CI
 
 env:
   IMAGE_TAG: vocabs-main:2.16
+  IMAGE_TAG_DEV: vocabs-main:3.4
 
 on:
   push:
@@ -28,11 +29,19 @@ jobs:
             cp ./config_staging.ttl ./skosmos/dockerfiles/config/config-docker.ttl
           fi
           if [[ "${{ github.ref_name }}" == "develop" || "${{ github.ref }} " == "refs/heads/develop" ]]; then
-            cp ./config_development.ttl ./skosmos/dockerfiles/config/config-docker.ttl
+            cp ./config_development.ttl ./vocabs-base-skosmos/dockerfiles/config/config-docker.ttl
           fi
       - name: generate build instructions using herokuish
         run: |
-          cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
+          if [[ "${{ github.ref_name }}" == "prod" || "${{ github.ref }}" == "refs/heads/prod" ]]; then
+            cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
+          fi
+          if [[ "${{ github.ref_name }}" == "stage" || "${{ github.ref }} " == "refs/heads/stage" ]]; then
+            cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
+          fi
+          if [[ "${{ github.ref_name }}" == "develop" || "${{ github.ref }} " == "refs/heads/develop" ]]; then
+            cp -r ./vocabs-base-skosmos/dockerfiles/Dockerfile.ubuntu ./vocabs-base-skosmos/Dockerfile
+          fi
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
@@ -43,7 +52,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push
+      - name: Build and push (prod)
+        if: github.base_ref == 'prod' || github.ref == 'refs/heads/prod'
         uses: docker/build-push-action@v3
         with:
           context: ./skosmos/
@@ -51,6 +61,24 @@ jobs:
           push: true
           tags: |
             ghcr.io/acdh-oeaw/${{ env.IMAGE_TAG }}${{ github.ref_name }}
+      - name: Build and push (stage)
+        if: github.base_ref == 'stage' || github.ref == 'refs/heads/stage'
+        uses: docker/build-push-action@v3
+        with:
+          context: ./skosmos/
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/acdh-oeaw/${{ env.IMAGE_TAG }}${{ github.ref_name }}
+      - name: Build and push (develop)
+        if: github.base_ref == 'develop' || github.ref == 'refs/heads/develop'
+        uses: docker/build-push-action@v3
+        with:
+          context: ./vocabs-base-skosmos/
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/acdh-oeaw/${{ env.IMAGE_TAG_DEV }}${{ github.ref_name }}
 
   rancher_production:
     needs: build_and_push_to_registry

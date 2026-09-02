@@ -1,3 +1,6 @@
 [submodule "skosmos"]
 	path = skosmos
 	url = https://github.com/acdh-oeaw/vocabs-update-theme
+[submodule "vocabs-base-skosmos"]
+	path = vocabs-base-skosmos
+	url = https://github.com/acdh-oeaw/vocabs-base-skosmos
