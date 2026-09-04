@@ -241,6 +241,24 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-CH-RedmineIssue: 28948
+:oscars_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Textgenetisches Glossar" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "http://vocabs.acdh.oeaw.ac.at/tgg/v1.0/" ;
+  skosmos:shortName "tgg" ;
+  skosmos:language "de" ;
+  skosmos:defaultLanguage "de" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  # skosmos:groupClass skos:Collection ;
+  skosmos:mainConceptScheme <http://vocabs.acdh.oeaw.ac.at/tgg/v1.0/> ;
+  skosmos:sparqlGraph <http://vocabs.acdh.oeaw.ac.at/tgg/v1.0/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
 # Category cat_archive
 
 # ACDH-CH-RedmineIssue: 21470
