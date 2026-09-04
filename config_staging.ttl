@@ -242,7 +242,7 @@
 .
 
 # ACDH-CH-RedmineIssue: 28948
-:oscars_browse a skosmos:Vocabulary, void:Dataset ;
+:tgg_browse a skosmos:Vocabulary, void:Dataset ;
   dc:title "Textgenetisches Glossar" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
