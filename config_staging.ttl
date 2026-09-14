@@ -225,7 +225,7 @@
 
 # ACDH-CH-RedmineIssue: 28162
 :oscars_browse a skosmos:Vocabulary, void:Dataset ;
-  dc:title "OSCARS / EOSC Vocabulary" ;
+  dc:title "OSCARS / EOSC Glossary" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/oscars/" ;
