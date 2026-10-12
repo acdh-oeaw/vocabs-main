@@ -207,20 +207,20 @@
   skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/ppop_voc/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
-# ACDH-RedmineIssue: xxxxx
-:resource-type_browse a skosmos:Vocabulary, void:Dataset ;
+# ACDH-RedmineIssue: 29236
+:sshomp-resource-type_browse a skosmos:Vocabulary, void:Dataset ;
   dc:title "SSHOMP Resource Type" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.dariah.eu/resource-type/" ;
-  skosmos:shortName "resource-type" ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/" ;
+  skosmos:shortName "sshomp-resource-type" ;
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
   skosmos:showTopConcepts "true" ;
   skosmos:hasMultiLingualProperty "true" ;
   skosmos:fullAlphabeticalIndex "false" ;
-  skosmos:mainConceptScheme <https://vocabs.dariah.eu/resource-type/> ;
-  skosmos:sparqlGraph <https://vocabs.dariah.eu/resource-type/> ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
 # ACDH-CH-RedmineIssue: 28162
