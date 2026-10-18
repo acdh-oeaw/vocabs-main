@@ -259,6 +259,24 @@
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
+# ACDH-RedmineIssue: 29299
+:terralid_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "TerraLID vocabularies" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "http://vocab.terralid.org#" ;
+  skosmos:shortName "terralid" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  # skosmos:groupClass skos:Collection ;
+  skosmos:mainConceptScheme <http://vocab.terralid.org> ;
+  skosmos:sparqlGraph <http://vocab.terralid.org#> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
 # Category cat_archive
 
 # ACDH-CH-RedmineIssue: 21470
