@@ -273,7 +273,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   # skosmos:groupClass skos:Collection ;
   skosmos:mainConceptScheme <http://vocab.terralid.org> ;
-  skosmos:sparqlGraph <http://vocab.terralid.org#> ;
+  skosmos:sparqlGraph <http://vocab.terralid.org> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
 .
 
