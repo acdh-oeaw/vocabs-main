@@ -191,21 +191,91 @@
   skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/openatlas-bone/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
 
-# ACDH-RedmineIssue: xxxxx
-:category_browse a skosmos:Vocabulary, void:Dataset ;
-  dc:title "SSHOMP Resource Category" ;
+# ACDH-RedmineIssue: n/a
+:ppop_voc_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Pottery Pyrotechnology and Craft Spaces Open Vocabulary" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.dariah.eu/category/" ;
-  skosmos:shortName "category" ;
+  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/ppop_voc/" ;
+  skosmos:shortName "ppop_voc" ;
+  skosmos:language "en", "fr" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/ppop_voc/> ;
+  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/ppop_voc/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
+# ACDH-RedmineIssue: 29236
+:sshomp-resource-type_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSHOMP Resource Type" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/" ;
+  skosmos:shortName "sshomp-resource-type" ;
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
   skosmos:showTopConcepts "true" ;
   skosmos:hasMultiLingualProperty "true" ;
   skosmos:fullAlphabeticalIndex "false" ;
-  skosmos:mainConceptScheme <https://vocabs.dariah.eu/category/> ;
-  skosmos:sparqlGraph <https://vocabs.dariah.eu/category/> ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql> .
+
+# ACDH-CH-RedmineIssue: 28162
+:oscars-eosc_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "OSCARS / EOSC Glossary" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/oscars-eosc/" ;
+  skosmos:shortName "oscars-eosc" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  # skosmos:groupClass skos:Collection ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/oscars-eosc/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/oscars-eosc/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
+# ACDH-CH-RedmineIssue: 28948
+:tgg_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Textgenetisches Glossar" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "http://vocabs.acdh.oeaw.ac.at/tgg/v1.0/" ;
+  skosmos:shortName "tgg" ;
+  skosmos:language "de" ;
+  skosmos:defaultLanguage "de" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  # skosmos:groupClass skos:Collection ;
+  skosmos:mainConceptScheme <http://vocabs.acdh.oeaw.ac.at/tgg/v1.0/> ;
+  skosmos:sparqlGraph <http://vocabs.acdh.oeaw.ac.at/tgg/v1.0/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
+
+# ACDH-RedmineIssue: 29299
+:terralid_browse a skosmos:Vocabulary, void:Dataset ;
+  dc:title "TerraLID vocabularies" ;
+  dc:subject :cat_stage ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "http://vocab.terralid.org#" ;
+  skosmos:shortName "terralid" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:groupClass skos:Collection ;
+  skosmos:mainConceptScheme <http://vocab.terralid.org#conceptScheme_a0559f69> ;
+  skosmos:sparqlGraph <http://vocab.terralid.org> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-stage/sparql>
+.
 
 # Category cat_archive
 
