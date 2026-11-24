@@ -177,7 +177,7 @@
 
 # ACDH-RedmineIssue: 26188
 :openatlas-bone_browse a skosmos:Vocabulary, void:Dataset ;
-  dc:title "OpenAtlas bone vocabulary" ;
+  dc:title "OpenAtlas Human Bone Vocabulary" ;
   dc:subject :cat_stage ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.acdh.oeaw.ac.at/openatlas-bone/" ;
